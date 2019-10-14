@@ -1,11 +1,15 @@
-//Step1: Import module and instantiate
-var express = require("express")();
-express.get('/',function(req,resp){
-    resp.send("Welcome to Web API");
-});
+var mongodb = require("mongodb");
 
-express.get('/date',function(req,resp){
-    resp.send(`Date is: ${new Date().toLocaleDateString()}`);
+var mongoClient=mongodb.MongoClient;
+
+var url = "mongodb://localhost:27017/KiranDB";
+
+mongoClient.connect(url,function(err,db){
+	if ( err )
+		console.log("Error : "+err);
+	else
+	{
+		console.log("Connection established successfully");
+		db.close();
+	}
 });
-//Step3: start listening
-express.listen(9000,()=>console.log("Express.js started listening..."));

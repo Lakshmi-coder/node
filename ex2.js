@@ -1,18 +1,12 @@
-//respond html with collection of items
-var http = require("http");
-var em = require('./employeeModule');
-var port=9000;
+var express= require("express")();
 
-var server = http.createServer(function(req,resp){
-    var employees = em.employees;
-    resp.writeHead(200,{'Content-Type':'text/html'});    
-    resp.write(`<h1> Node.js APP </h1>
-        <ol>
-        ${employees.map(e=> "<li>" + e.ename +"</li>"  )}    
-        </ol>
-    `);
-    resp.end( );
+express.get("/",function(req,resp){
+
+    resp.send("Welcome to Web API using express");
 });
-server.listen(port,function(){
-    console.log("Server started listening...");
+var d= new Date();
+express.get("/wishes",function(req,resp){
+    resp.send("Date is: "+d.toLocaleDateString());
 });
+
+express.listen(9001, () => console.log("Web API started listening..."));

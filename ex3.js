@@ -1,17 +1,26 @@
-//handling form get and post
-var http = require("http");
-var port=9000;
+var express= require("express")();
 
-var server = http.createServer(function(req,resp){
-    resp.writeHead(200,{'Content-Type':'text/html'});    
-    resp.write(`<h1> Handling form </h1>
-        <form method="post">
-            <input type="submit" />
-        </form> 
-        ${req.method}
-    `);
-    resp.end( );
+express.get("/",function(req,resp){
+    resp.send("Welcome to Web API using express");
 });
-server.listen(port,function(){
-    console.log("Server started listening...");
+express.get("/wishes",function(req,resp){
+    var hour = d.getHours();
+    if ( hour<12 )
+        resp.send("Good Morning!");
+    else if ( hour<16)
+        resp.send("Good Afternoon!");
+    else
+        resp.send("Good Evening!");
 });
+
+var d= new Date();
+express.get("/date",function(req,resp){
+    
+    resp.send("Date is: "+d.toLocaleDateString());
+});
+express.get("/time",function(req,resp){
+    
+    resp.send("Time is: "+d.toLocaleTimeString());
+});
+
+express.listen(9001, () => console.log("Web API started listening..."));
