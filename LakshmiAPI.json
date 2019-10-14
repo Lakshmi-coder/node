@@ -1,0 +1,71 @@
+{
+  "employees": [
+    {
+      "id": "1",
+      "ename": "Lakshmi",
+      "job": "Trainer",
+      "salary": 5500
+    },
+    {
+      "id": "2",
+      "ename": "Sindhu",
+      "job": "Programer",
+      "salary": 5700
+    },
+    {
+      "id": "4",
+      "ename": "David",
+      "job": "Trainer",
+      "salary": 6500
+    },
+    {
+      "id": "1001",
+      "ename": "rohith",
+      "job": "programer",
+      "salary": 800
+    }
+  ],
+  "students": [
+    {
+      "id": "1",
+      "sname": "anil",
+      "course": "Angular",
+      "fee": 1000
+    },
+    {
+      "id": "2",
+      "sname": "carishma",
+      "course": "C",
+      "fee": 8000
+    },
+    {
+      "id": "4",
+      "sname": "sindhu",
+      "course": "Html",
+      "fee": 9000
+    },
+    {
+      "id": "1004",
+      "sname": "sai",
+      "course": "css",
+      "fee": 900
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
