@@ -1,0 +1,33 @@
+<!-- <style>
+.table, thead, th, tr,   td{
+ border: 3px,black;   
+}  
+.table{
+    border-collapse: collapse;
+}
+    </style> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+<h2>Employees Data from</h2> 
+<table class="table table-bordered table-hover ">    
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Ename</th>
+            <th>Job</th>
+            <th>Salary</th>
+         </tr>
+    </thead>
+    <tbody>
+            <tr *ngFor="let e of employees">
+                    <td>{{e.id}}</td>
+                    <td>{{e.ename}}</td>
+                    <td>{{e.job}}</td>
+                    <td>{{e.salary}}</td>
+                    
+                    
+        
+                </tr>
+            </tbody>
+        </table>
